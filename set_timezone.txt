@@ -1,0 +1,16 @@
+for /F %%a in (firewalls.txt) do (
+
+ECHO %%a
+plink.exe usuario@%%a -pw 123456 lock database override >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 show hostname >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 show timezone >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 show time >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 set timezone America / Sao_Paulo >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 save config >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 show timezone >> c:\timezone_output.txt
+plink.exe usuario@%%a -pw 123456 show time >> c:\timezone_output.txt
+
+)
+
+ECHO Timezone Ajustado
+Pause
