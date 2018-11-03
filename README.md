@@ -14,4 +14,5 @@ Edit the script and replace the word "usuario" by your username and replace "123
 
 Finally, To execute the script, change the extension from txt to bat.
 
+The script you generate a file with the output of the commands and the hostname of each firewall. The path is c:\timezone_output.txt.
 
